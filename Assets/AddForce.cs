@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AddForce : MonoBehaviour
 {
+    [SerializeField] private float force;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,7 @@ public class AddForce : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 500);
+            GetComponent<Rigidbody>().AddRelativeForce(Vector3.right * force);
         }
     }
 }
